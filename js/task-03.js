@@ -14,10 +14,12 @@ const images = [
 ];
 
 const galleryList = document.querySelector('.gallery');
+const arrImages = [];
 
-const galleryCreateElement = images.forEach(image => {
+images.forEach(image => {
   const imageElement = `<li><img src="${image.url}" alt="${image.alt}"></li>`
-  galleryList.insertAdjacentHTML("beforeend", imageElement);
-
+  arrImages.push(imageElement);
 })
 
+const updateArr = arrImages.join("");
+galleryList.insertAdjacentHTML("beforeend", updateArr);

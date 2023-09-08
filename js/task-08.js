@@ -14,7 +14,8 @@ function formSubmit(event) {
         return alert('Не всі поля заповнені');
     }
 
-    console.log(`Email: ${user.email}, Password: ${user.password}`);
-
+    // console.log(`Email: ${user.email}, Password: ${user.password}`);
+    console.log(user);
+    
     form.reset();
 }

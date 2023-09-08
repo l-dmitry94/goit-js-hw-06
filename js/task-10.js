@@ -1,7 +1,5 @@
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+  return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
 }
 
 const controls = document.querySelector("#controls");
@@ -16,12 +14,12 @@ function createBoxes(amount) {
   let size = 30;
   let box = '';
 
-  for(let i = 0; i < amount; i++) {
+  for (let i = 0; i < amount; i++) {
     const color = getRandomHexColor();
     box += `<div style="width: ${size}px; height: ${size}px; background-color: ${color}"></div>`
     size += 10;
   }
-  
+
   boxes.innerHTML += box;
 }
 
